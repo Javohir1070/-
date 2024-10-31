@@ -1,0 +1,129 @@
+.site-footer {
+    background-color: #0B7572;
+    padding: 80px 0 30px 0;
+}
+
+.footer {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.footer__first-child {
+    max-width: 133px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.footer__link {
+    @include textStyle ($MB:0,$FS:13px,$FW:500,$LH:20px,$Color:#FFFFFF);
+    letter-spacing: 16%;
+    transition: all 0.3s;
+    &:hover{
+        color: #FF9619;
+    }
+}
+.footer__second-child {
+    max-width: 133px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.footer__third-child {
+    max-width: 271px;
+
+}
+
+.footer__icon{
+    margin-bottom: 32px;
+    transition: all 0.3s;
+    &:hover{
+        transform: translateY(-5px);
+    }
+}
+.footer__icon-two{
+    margin-bottom: 32px;
+    margin-left: 15px;
+    transition: all 0.3s;
+    &:hover{
+        transform: translateY(-5px);
+    }
+}
+.footer__tel-link {
+    display: block;
+    @include textStyle ($MB:32px,$FS:13px,$FW:600,$LH:20px,$Color:#FFFFFF);
+}
+.footer__btn {
+    position: relative;
+    @include ButtonStyle($W:271px,$BG:#FF9619, $Color:#FFFFFF, $PY:8px );
+    padding-right: 35px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 19.5px;
+    &::before{
+        position: absolute;
+        content: "";
+        width: 24px;
+        height: 10px;
+        background-image: url(../../images/footer-btn-icon.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        right: 5px;
+    }
+    &:hover{
+        background-color: white;
+        color: #FF9619;
+        border-radius: 24px;
+    }
+}
+
+.footer__text{
+    @include textStyle ($MB:0,$FS:12px,$FW:500,$LH:18px,$Color:#FFFFFF);
+    text-align: center;
+}
+
+@media (max-width:1000px){
+    footer{
+        max-width: 100%;
+    }
+    .footer__third-child{
+        max-width: 100%;
+    }
+    .footer__icon{
+        width: 27px;
+    }
+    .footer__icon-two{
+        width: 27px;
+    }
+
+}
+@media (max-width:650px){
+    .footer{
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    
+    }
+    .footer__first-child {
+        margin:  0 auto;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .footer__second-child{
+        margin:  0 auto;
+        max-width: 100%;
+        margin-bottom: 20px;
+
+    }
+    .footer__third-child{
+        margin:  0 auto;
+        max-width: 100%;
+    }
+   
+

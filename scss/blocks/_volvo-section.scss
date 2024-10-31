@@ -1,0 +1,19 @@
+.volvo-section {
+    margin-bottom: 166px;
+}
+@media (max-width:1000px){
+    .volvo-section{
+        margin-bottom: 126px;
+    }
+        video{
+            max-width: 100%;
+        }
+}
+@media (max-width:650px){
+    .volvo-section{
+        margin-bottom: 26px;
+    }
+    video{
+        max-width: 100%;
+    }
+}

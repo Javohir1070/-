@@ -1,0 +1,102 @@
+.work-section {
+    margin-bottom: 80px;
+}
+.work__title-wrapper {
+    max-width: 540px;
+    margin-bottom: 56px;
+}
+.work__title {
+    @include textStyle ($MB:32px,$FS:48px,$FW:600,$LH:60px,$Color:#363738);
+}
+.work__content {
+    @include textStyle ($MB:0,$FS:16px,$FW:400,$LH:24px,$Color:#6B6B6C);
+    max-width: 494px;
+}
+.work__list {
+    @include display($space:space-between);
+    gap: 10px;
+}
+.work__item {
+    box-shadow: 0px 4px 15px 0px #0000001F;
+    max-width: 393px;
+    border-radius: 10px;
+}
+.work__img {
+    margin-bottom: 24px;
+    transition: all 0.3s;
+    &:hover{
+        transform: translateY(-15px);
+    }
+}
+.work__wrapper {
+    max-width: 290px;
+    padding-bottom: 32px;
+    padding-left: 32px;
+}
+.work__subtitle {
+    @include textStyle ($MB:16px,$FS:20px,$FW:600,$LH:27px,$Color:#363738);
+}
+.work__text {
+    @include textStyle ($MB:32px,$FS:16px,$FW:400,$LH:24px,$Color:#6B6B6C);
+}
+.work__count {
+    max-width: 91px;
+    display: block;
+    @include textStyle ($MB:0,$FS:16px,$FW:600,$LH:21px,$Color:#363738);
+    border-bottom:  3px solid #FFCE50;
+    transition: all 0.3s;
+    &:hover{
+        transform: translateX(5px);
+        border-bottom: 3px solid  yellow;
+    }
+}
+
+@media (max-width:1000px){
+    .work-section{
+        margin-bottom: 44px;
+    }
+    .work__title-wrapper{
+        max-width: 70%;
+    }
+    .work__list {
+        flex-direction: column;
+
+    }
+    .work__item{
+        max-width: 900px;
+        margin-bottom: 32px;
+        &:nth-child(3){
+            display: none;
+        }
+    }
+    .work__img{
+        width: 800px;
+        height: auto;
+    }
+    .work__wrapper{
+        max-width: 90%;
+    }
+}
+
+@media (max-width:750px){
+    .work-section{
+        margin-bottom: 28px;
+    }
+    .work__title-wrapper{
+        max-width: 100%;
+        margin-bottom: 32px;
+    }
+    .work__item{
+        max-width: 100%;
+        &:nth-child(2){
+            display: none;
+        }
+    }
+    .work__img{
+        width: 600px;
+        height: auto;
+    }
+    .work__wrapper{
+        max-width: 70%;
+    }
+}
